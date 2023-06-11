@@ -13,7 +13,6 @@ ChatGPT API工具包
 ## 添加配置
 ```
 chatgpt:
-  enable: true
   proxy-url: https://api.openai-proxy.com
   api-key: XXX
   role: user
