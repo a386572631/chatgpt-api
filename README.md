@@ -14,6 +14,10 @@ ChatGPT API工具包
 ```
 chatgpt:
   proxy-url: https://api.openai-proxy.com
-  api-key: XXX
-  role: user
+  api-key: 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
+  text:
+    role: user
+  image:
+    num: 1
+    size: 1024x1024
 ```
