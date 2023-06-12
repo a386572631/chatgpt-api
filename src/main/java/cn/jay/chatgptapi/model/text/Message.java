@@ -1,4 +1,4 @@
-package cn.jay.chatgptapi.model;
+package cn.jay.chatgptapi.model.text;
 
 /**
  * @Author: Jay<jin0201 @ foxmail.com>.

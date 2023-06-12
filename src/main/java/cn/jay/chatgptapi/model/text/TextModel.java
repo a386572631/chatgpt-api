@@ -1,4 +1,4 @@
-package cn.jay.chatgptapi.model;
+package cn.jay.chatgptapi.model.text;
 
 import java.util.List;
 
