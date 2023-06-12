@@ -6,7 +6,7 @@ ChatGPT API工具包
 <dependency>
   <groupId>cn.jay</groupId>
   <artifactId>chatgpt-api</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1-RELEASE</version>
 </dependency>
 ```
 

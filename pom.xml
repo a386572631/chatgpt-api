@@ -9,7 +9,7 @@
     </parent>
     <groupId>cn.jay</groupId>
     <artifactId>chatgpt-api</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.1-RELEASE</version>
     <name>chatgpt-api</name>
     <description>chatGPT API集成工具</description>
     <properties>
