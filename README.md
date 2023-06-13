@@ -4,7 +4,7 @@ ChatGPT API工具包
 ## 引入依赖包
 ```
 <dependency>
-  <groupId>cn.jay</groupId>
+  <groupId>io.github.a386572631</groupId>
   <artifactId>chatgpt-api</artifactId>
   <version>0.0.1-RELEASE</version>
 </dependency>
@@ -14,7 +14,7 @@ ChatGPT API工具包
 ```
 chatgpt:
   proxy-url: https://api.openai-proxy.com
-  api-key: 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
+  api-key: xxx
   text:
     role: user
   image:
