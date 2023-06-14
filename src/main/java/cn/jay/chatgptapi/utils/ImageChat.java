@@ -3,7 +3,7 @@ package cn.jay.chatgptapi.utils;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.json.JSONUtil;
-import cn.jay.chatgptapi.config.ImageProperties;
+import cn.jay.chatgptapi.config.ChatGPTProperties;
 import cn.jay.chatgptapi.exception.ChatGptException;
 import cn.jay.chatgptapi.model.image.ImageModel;
 import cn.jay.chatgptapi.model.image.ImageResponse;
@@ -24,12 +24,12 @@ public class ImageChat implements IChat {
 
     @Override
     public List<String> chat(String content) throws ChatGptException {
-        String url = ImageProperties.getProxyUrl();
-        String apiKey = ImageProperties.getApiKey();
+        String url = ChatGPTProperties.getProxyUrl();
+        String apiKey = ChatGPTProperties.getApiKey();
         ImageModel imageModel = new ImageModel();
         imageModel.setPrompt(content);
-        imageModel.setN(ImageProperties.getNum());
-        imageModel.setSize(ImageProperties.getSize());
+        imageModel.setN(ChatGPTProperties.getImage().getNum());
+        imageModel.setSize(ChatGPTProperties.getImage().getSize());
 
         String bodyStr = JSONUtil.toJsonStr(imageModel);
         log.info("request: " + bodyStr);

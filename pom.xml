@@ -13,7 +13,7 @@
     <name>chatgpt-api</name>
     <description>chatGPT API集成工具</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
         <packaging>pom</packaging>
     </properties>
     <dependencies>
@@ -24,6 +24,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
 
         <dependency>
@@ -37,29 +38,6 @@
             <version>5.8.18</version>
         </dependency>
     </dependencies>
-
-    <repositories>
-        <repository>
-            <id>rdc-releases</id>
-            <url>https://packages.aliyun.com/maven/repository/2347712-release-vMhmyr/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>rdc-snapshots</id>
-            <url>https://packages.aliyun.com/maven/repository/2347712-snapshot-wSTRxR/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
     <profiles>
         <profile>
             <id>release</id>
@@ -151,12 +129,12 @@
                 <snapshotRepository>
                     <id>sonatype-nexus-snapshots</id>
                     <name>Sonatype Nexus Snapshots</name>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                    <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
                 </snapshotRepository>
                 <repository>
                     <id>sonatype-nexus-snapshots</id>
                     <name>Nexus Release Repository</name>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                    <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
         </profile>

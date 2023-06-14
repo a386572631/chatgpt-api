@@ -3,7 +3,7 @@ package cn.jay.chatgptapi.utils;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.json.JSONUtil;
-import cn.jay.chatgptapi.config.TextProperties;
+import cn.jay.chatgptapi.config.ChatGPTProperties;
 import cn.jay.chatgptapi.exception.ChatGptException;
 import cn.jay.chatgptapi.model.text.Message;
 import cn.jay.chatgptapi.model.text.TextModel;
@@ -25,12 +25,12 @@ public class TextChat implements IChat {
     private final String URL_PATH = "/v1/chat/completions";
 
     public List<String> chat(String content) throws ChatGptException {
-        String url = TextProperties.getProxyUrl();
-        String key = TextProperties.getApiKey();
+        String url = ChatGPTProperties.getProxyUrl();
+        String key = ChatGPTProperties.getApiKey();
         TextModel textModel = new TextModel();
         textModel.setModel("gpt-3.5-turbo");
         Message message = new Message();
-        message.setRole(TextProperties.getRole());
+        message.setRole(ChatGPTProperties.getText().getRole());
         message.setContent(content);
 
         textModel.setMessages(Arrays.asList(message));

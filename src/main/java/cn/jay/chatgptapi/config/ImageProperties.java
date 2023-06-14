@@ -1,16 +1,16 @@
 package cn.jay.chatgptapi.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 /**
  * @Author: Jay<jin0201 @ foxmail.com>.
  * @Date: 2023/6/11-21:11
  * @Description:
  */
-@Configuration
-@ConfigurationProperties(prefix = "image")
-public class ImageProperties extends ChatGPTProperties {
+@Component
+@ConfigurationProperties(prefix = "chatgpt.image")
+public class ImageProperties {
     /**
      * Must be between 1 and 10
      */
