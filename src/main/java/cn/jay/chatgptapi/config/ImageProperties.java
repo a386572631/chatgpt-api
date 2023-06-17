@@ -14,14 +14,14 @@ public class ImageProperties {
     /**
      * Must be between 1 and 10
      */
-    private static Integer num;
+    private Integer num;
 
     /**
      * one of 256x256, 512x512, or 1024x1024
      */
-    private static String size = "1024x1024";
+    private String size = "1024x1024";
 
-    public static Integer getNum() {
+    public Integer getNum() {
         return num;
     }
 
@@ -29,11 +29,11 @@ public class ImageProperties {
         this.num = n;
     }
 
-    public static String getSize() {
-        return ImageProperties.size;
+    public String getSize() {
+        return this.size;
     }
 
     public void setSize(String size) {
-        ImageProperties.size = size;
+        this.size = size;
     }
 }

@@ -16,13 +16,13 @@ public class TextProperties {
     /**
      * One of system, user, or assistant.
      */
-    private static String role = RoleType.USER.getType();
+    private String role = RoleType.USER.getType();
 
     public void setRole(String role) {
         this.role = RoleType.of(role).getType();
     }
 
-    public static String getRole() {
-        return TextProperties.role;
+    public String getRole() {
+        return this.role;
     }
 }

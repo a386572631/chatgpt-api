@@ -8,6 +8,7 @@ import cn.jay.chatgptapi.exception.ChatGptException;
 import cn.jay.chatgptapi.model.text.Message;
 import cn.jay.chatgptapi.model.text.TextModel;
 import cn.jay.chatgptapi.model.text.TextResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -23,14 +24,16 @@ import java.util.stream.Collectors;
 @Service(value = "text")
 public class TextChat implements IChat {
     private final String URL_PATH = "/v1/chat/completions";
+    @Autowired
+    ChatGPTProperties chatGPTProperties;
 
     public List<String> chat(String content) throws ChatGptException {
-        String url = ChatGPTProperties.getProxyUrl();
-        String key = ChatGPTProperties.getApiKey();
+        String url = chatGPTProperties.getProxyUrl();
+        String key = chatGPTProperties.getApiKey();
         TextModel textModel = new TextModel();
         textModel.setModel("gpt-3.5-turbo");
         Message message = new Message();
-        message.setRole(ChatGPTProperties.getText().getRole());
+        message.setRole(chatGPTProperties.getText().getRole());
         message.setContent(content);
 
         textModel.setMessages(Arrays.asList(message));
